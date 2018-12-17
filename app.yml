@@ -1,5 +1,5 @@
 runtime: nodejs8
-instance_class: F1
+instance_class: B1
 handlers:
   - url: '.*'
     script: auto

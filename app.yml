@@ -3,6 +3,8 @@ threadsafe: yes
 service: hello-nodejs
 runtime: nodejs
 env: flex
+env_variables:
+  GCLOUD_STORAGE_BUCKET: gs://nodejs-app
 manual_scaling:
   instances: 1
 resources:

@@ -1,2 +1,1 @@
-service: hello-nodejs
 runtime: nodejs8

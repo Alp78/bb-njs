@@ -12,9 +12,10 @@ pipelines:
           - curl -O -J https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${SDK_FILENAME}
           - tar -zxvf ${SDK_FILENAME} --directory ${HOME}
           - export PATH=${PATH}:${HOME}/google-cloud-sdk/bin
-          # Install app & dev dependencies, test, deploy, test deployment
+          # Authenticate
           - echo "key = '${GOOGLE_API_KEY}'" > api_key.py
           - echo ${GOOGLE_CLIENT_SECRET} > client-secret.json
           - gcloud auth activate-service-account --key-file client-secret.json
-          - gcloud -q app deploy app.yml --no-promote --verbosity=debug
-          - node app.js
+          # Install app & dependencies, deploy
+          - npm install
+          - gcloud -q app deploy app.yml

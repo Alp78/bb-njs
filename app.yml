@@ -1,3 +1,5 @@
+api_version: 1
+threadsafe: yes
 service: hello-nodejs
 runtime: nodejs
 env: flex

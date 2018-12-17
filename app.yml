@@ -1,10 +1,8 @@
-api_version: 1
-threadsafe: yes
+api_version: 2
 service: hello-nodejs
 runtime: nodejs
 env: flex
-env_variables:
-  GCLOUD_STORAGE_BUCKET: gs://nodejs-app
+
 manual_scaling:
   instances: 1
 resources:

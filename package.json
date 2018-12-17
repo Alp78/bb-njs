@@ -1,14 +1,11 @@
 {
-  "name": "bitbucket-pip-ap",
-  "description": "Simple Hello World Node.js sample for Google App Engine Flexible Environment.",
-  "private": true,
   "engines": {
     "node": "8.x.x"
   },
   "dependencies": {
     "express": "^4.16.3"
   },
-  "devDependencies": {
-    "@google-cloud/nodejs-repo-tools": "4.16.4"
+  "scripts": {
+    "start": "node app.js"
   }
 }

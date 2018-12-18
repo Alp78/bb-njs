@@ -18,4 +18,4 @@ pipelines:
           - gcloud auth activate-service-account --key-file client-secret.json
           # Install app & dependencies, deploy
           - npm install
-          - gcloud --quiet --verbosity=debug app deploy app.yml --promote
+          - gcloud -q app deploy app.yaml --no-promote --verbosity=debug
